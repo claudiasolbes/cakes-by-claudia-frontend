@@ -1,26 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import WelcomePage from "./components/WelcomePage"
+import VisitorHome from "./components/VisitorHome"
+import SignInPage from "./components/SignInPage"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      isLoggedIn: null,
+      cakes: []
+    }
+  }
+
+  componentDidMount(){
+    fetch("http://localhost:3000/cakes")
+    .then(resp => resp.json())
+    .then(cakes =>
+      this.setState({
+        cakes: cakes
+      }))
+  }
+
+  visitorLogIn = () => {
+    this.setState({
+      isLoggedIn: false
+    })
+  }
+
+  userLogIn = () => {
+    this.setState({
+      isLoggedIn: true
+    })
+  }
+
+  cakeCardButton = () => {
+    console.log("clicked")
+  }
+
+  render(){
+    if(this.state.isLoggedIn === null){
+    return (
+        <WelcomePage
+          visitorLogIn={this.visitorLogIn}
+          userLogIn={this.userLogIn}
+          isLoggedIn={this.state.isLoggedIn}
+        />
+    )}
+    else if(this.state.isLoggedIn === true){
+      return (
+          <SignInPage />
+      )}
+      else {
+        return (
+          <VisitorHome
+            cakes={this.state.cakes}
+            cakeCardButton={this.cakeCardButton}
+          />
+        )
+      }
+  }
 }
 
 export default App;
