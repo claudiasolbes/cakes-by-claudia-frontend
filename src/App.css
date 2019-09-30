@@ -1,3 +1,5 @@
+
+/* Welcome Page */
 .WelcomePage {
   background: url("./images/backgrounds/welcomepage.jpg");
   background-position: center;
@@ -21,18 +23,22 @@
 }
 
 .vh-middle-column{
-  text-align: center
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 550%;
+  color: hotpink;
 }
 
 .orderButton{
   text-align: center
 }
 
+/* About and Contact Page */
 .AboutAndContactPage {
   background: url("./images/backgrounds/pastel-color-watercolor-stain-background_52683-12281.jpg");
   background-position: center;
   background-size: cover;
-  min-height: 689px;
+  min-height: 608px;
   min-width: 1500px;
 }
 
@@ -48,8 +54,93 @@
   min-height: 550px;
 }
 
-.card{
+.cakeCard{
   max-width: 290px;
   min-height: 290px;
-  padding: 10px 10px 10px 10px
+  margin: 10px 10px 10px 10px
+}
+
+.signInForm{
+  position:relative;
+    transition: .5s ease;
+    top: -500px;
+    left: 410px;
+    max-width: 600px;
+    min-height: 290px;
+}
+
+.OrderPage {
+  background: url("./images/backgrounds/stripes.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 607px;
+  min-width: 1500px;
+}
+
+.aboutAndContact{
+  position:relative;
+    transition: .5s ease;
+    top: -560px;
+    left: 250px;
+}
+
+.Home {
+  background: url("./images/backgrounds/unicorn.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 648px;
+  min-width: 1500px;
+}
+
+.greeting{
+  position:relative;
+    transition: .5s ease;
+    top: -600px;
+    left: 80px;
+}
+
+.scrollDownButton {
+  position:relative;
+    transition: .5s ease;
+    top: -80px;
+    left: 693px;
+}
+
+.UserProfile {
+  background: url("./images/backgrounds/teal_cake.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 648px;
+  min-width: 1500px;
+}
+
+.avatar{
+  position:relative;
+  transition: .5s ease;
+  top: -600px;
+  left: 80px;
+}
+
+.profileInfo{
+  position:relative;
+  transition: .5s ease;
+  top: -550px;
+  left: 80px;
+}
+
+.UserOrders {
+  background: url("./images/backgrounds/fork.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 648px;
+  min-width: 1500px;
+}
+
+.aboutAndContactContainer{
+  max-height: 608px;
+  min-width: 1500px;
+}
+
+.footer{
+  padding-bottom: 10px
 }

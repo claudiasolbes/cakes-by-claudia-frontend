@@ -1,9 +1,22 @@
 import React, {Component} from "react";
+import CakeList from "./CakeList";
+import HomeGreeting from "./HomeGreeting";
 
 class Home extends Component {
   render(){
     return (
-      <p>Home</p>
+      <div>
+        <img src="./images/backgrounds/unicorn.png" className="Home" alt="">
+        </img>
+        <HomeGreeting />
+        <br></br>
+        <br></br>
+        <CakeList
+          cakes={this.props.cakes}
+          showCake={this.props.showCake}
+        />
+        <br></br>
+      </div>
     );
   }
 }

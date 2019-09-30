@@ -8,9 +8,11 @@ class CakeList extends Component {
       <Card.Group centered itemsPerRow={6}>
         {this.props.cakes.map(cake => {
           return (
-            <div className="cakeList" key={cake.id} onClick={this.props.cakeCardButton}>
+            <div className="cakeList" key={cake.id}>
             <CakeCard
               cake={cake}
+              selectedCake={this.props.selectedCake}
+              findCake={this.props.findCake}
             />
             </div>
         )})

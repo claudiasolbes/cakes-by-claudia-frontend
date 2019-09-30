@@ -1,24 +1,46 @@
 import React, {Component} from "react";
-import {Button} from "semantic-ui-react"
+import { Button, Divider, Form, Grid, Segment } from "semantic-ui-react";
 
-class WelcomePage extends Component{
+class SignInPage extends Component{
   render(){
     return (
       <div>
         <h1>Coming Soon...</h1>
         <img src="./images/backgrounds/welcomepage.jpg" className="WelcomePage" alt="">
         </img>
-          {/* <Button
-            className="logInButton"
-            onClick={this.props.userLogIn}
-            >Log In</Button>
-          <Button
-            className="createAccountButton"
-            onClick={this.props.visitorLogIn}
-          >Create Account</Button> */}
+        <div class="signInForm">
+          <Segment placeholder>
+            <Grid columns={2} relaxed='very' stackable>
+              <Grid.Column>
+                <Form>
+                  <Form.Input
+                    icon='user'
+                    iconPosition='left'
+                    label='Username'
+                    placeholder='Username'
+                  />
+                  <Form.Input
+                    icon='lock'
+                    iconPosition='left'
+                    label='Password'
+                    type='password'
+                  />
+
+                  <Button content='Login' primary />
+                </Form>
+              </Grid.Column>
+
+              <Grid.Column verticalAlign='middle'>
+                <Button content='Sign up' icon='signup' size='big' />
+              </Grid.Column>
+            </Grid>
+
+            <Divider vertical>Or</Divider>
+          </Segment>
+        </div>
       </div>
     );
   }
 }
 
-export default WelcomePage;
+export default SignInPage;

@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class Order extends Component {
   render(){
     return (
-        <img src="./images/backgrounds/stripes.jpg" className="OrderPage" alt="">
+        <img src="./images/backgrounds/fork.jpg" className="UserOrders" alt="">
         </img>
     );
   }

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import { Grid, Image, Segment, Button } from 'semantic-ui-react'
+import { Grid, Image, Segment, Button } from 'semantic-ui-react';
+import {Link} from "react-router-dom";
 
 class VisitorHomeGreeting extends Component {
   render(){
@@ -8,11 +9,13 @@ class VisitorHomeGreeting extends Component {
     <Grid.Row stretched>
       <Grid.Column>
         <Segment>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5DMuChOgh1xVyLIlVv_SBPq5NrM_lU57arcqYOfV3SzrgjxxCeg" className="homeCake" alt=""/>
+            <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5DMuChOgh1xVyLIlVv_SBPq5NrM_lU57arcqYOfV3SzrgjxxCeg" className="homeCake" alt=""/>
         </Segment>
       </Grid.Column>
       <Grid.Column width={6}>
         <Segment>
+          <br></br>
+          <br></br>
           <h1 className="vh-middle-column">Designer Cakes for any ocasion!</h1>
           <div className="orderButton">
           <br></br>
@@ -22,9 +25,19 @@ class VisitorHomeGreeting extends Component {
           <br></br>
             <Button
               className="orderButton"
-              // onClick={}
+              as={Link}
+              to="/order"
             >
               Order Here
+            </Button>
+            <br></br>
+            <br></br>
+            <Button
+              // className="orderButton"
+              // as={Link}
+              // to="/order"
+            >
+              Show me the cakes!
             </Button>
           </div>
         </Segment>
