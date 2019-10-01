@@ -5,9 +5,14 @@ import {Link} from "react-router-dom"
 class WelcomePage extends Component{
   render(){
     return (
-      <div>
+      <div className="welcomePageContainer">
         <img src="./images/backgrounds/welcomepage.jpg" className="WelcomePage" alt="">
         </img>
+        <>
+        <h1 className="welcomeTitle1">Welcome to Cakes By Claudia,</h1>
+        <br></br>
+        <h1 className="welcomeTitle2">where we make your dreams become cakes!</h1>
+        </>
           <Button
             className="logInButton"
             onClick={this.props.userLogIn}

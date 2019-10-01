@@ -6,7 +6,7 @@ class HomeGreeting extends Component {
     return (
       <div>
         <div className="greeting">
-          <h1>Hi, User!</h1>
+          <h1>Hi, {this.props.user.name}!</h1>
         </div>
         <div className="scrollDownButton">
           <Button>

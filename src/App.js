@@ -12,19 +12,40 @@ import UserProfile from "./components/UserProfile"
 import UserOrders from "./components/UserOrders"
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
-import {Route, Switch} from "react-router-dom"
+import {Route, Switch, Redirect} from "react-router-dom"
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      isLoggedIn: null,
       cakes: [],
-      selectedCake: {}
+      selectedCake: {},
+      user: null,
+      loading: true,
+      orders: []
     }
   }
 
+  updateUser = (user) => {
+    this.setState({
+      user: user,
+      loading: false
+    })
+  }
+
   componentDidMount(){
+    if(localStorage.getItem("token")){
+      fetch("http://localhost:3000/home", {
+        headers: {
+          "Authentication" : `Bearer ${localStorage.getItem("token")}`
+        }
+      }).then(resp => resp.json())
+      .then(user => {
+        this.updateUser(user)
+      })
+    }else{
+      this.setState({loading: false})
+    }
     fetch("http://localhost:3000/cakes")
     .then(resp => resp.json())
     .then(cakes =>
@@ -47,34 +68,45 @@ class App extends Component {
     }
 
   render(){
-    console.log(this.state.selectedCake)
     return(
       <>
-        <Switch>
+        <NavBar logged_in={!!this.state.user} updateUser={this.updateUser} user={this.state.user}/>
+        {!this.state.loading ? <Switch>
           <Route exact path = "/" component={WelcomePage}/>
-          <Route exact path = "/login" component={SignInPage}/>
-        </Switch>
-        <NavBar />
-        <Switch>
+          <Route exact path = "/login" render={() => this.state.user ? 
+          <Redirect to="/home" /> :
+            <SignInPage 
+              updateUser={this.updateUser}
+            />
+          }/>
+          <Route exact path = "/home" render={() => this.state.user ?
+            <Home
+              {...this.state.user}
+              user={this.state.user}
+              cakes={this.state.cakes}
+            /> :
+            <Redirect to= "/visitorhome" />
+          }/>
           <Route exact path = "/visitorhome" render={() => <VisitorHome
             cakes={this.state.cakes}
             findCake={this.findCake}
           />}/>
           <Route exact path = "/about" component={AboutContact}/>
           <Route exact path = "/contact" component={AboutContact}/>
-          <Route exact path = "/home" render={() => <Home
-            cakes={this.state.cakes}
-          />}/>
           <Route exact path = "/order" component={Order}/>
-          <Route exact path = "/user" component={UserProfile}/>
           <Route exact path = "/footer" component={Footer}/>
-          <Route exact path = "/cake" component={CakeShowPage}/>
-          <Route exact path = "/user/orders" component={UserOrders}/>
-          <Route exact path = "/cakes/:id" render={() => <CakeShowPage
+          <Route exact path = "/admin" component={Footer}/>
+          <Route exact path = "/cake/:id" render={() => <CakeShowPage
             selectedCake={this.state.selectedCake}
+            />}/>
+          <Route exact path = "/admin/:id" component={Footer}/>
+          <Route exact path = "/user/:id/orders" component={UserOrders}/>
+          <Route exact path = "/:username" render={() => <UserProfile
+            user={this.state.user}
+            orders={this.state.orders}
           />}/>
           <Route component={PageNotFound}/>
-        </Switch>
+        </Switch> : null}
         <Footer />
       </>
     )

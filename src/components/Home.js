@@ -8,7 +8,9 @@ class Home extends Component {
       <div>
         <img src="./images/backgrounds/unicorn.png" className="Home" alt="">
         </img>
-        <HomeGreeting />
+        <HomeGreeting 
+          user={this.props.user}
+        />
         <br></br>
         <br></br>
         <CakeList

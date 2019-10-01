@@ -10,7 +10,7 @@ class CakeInfo extends Component {
           src={this.props.cake.image}
           onClick={this.props.findCake}
           as={Link}
-          to={`/cakes/` + `${this.props.cake.id}`}
+          to={`/cakes/${this.props.cake.id}`}
         />
       </div>
     );
