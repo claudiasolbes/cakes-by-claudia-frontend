@@ -12,6 +12,7 @@ import UserProfile from "./components/UserProfile"
 import UserOrders from "./components/UserOrders"
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
+import JoinForm from "./components/JoinForm"
 import {Route, Switch, Redirect} from "react-router-dom"
 
 class App extends Component {
@@ -79,6 +80,15 @@ class App extends Component {
               updateUser={this.updateUser}
             />
           }/>
+          <Route exact path = "/join" render={() => this.state.user ? 
+          <Redirect to="/home" /> :
+            <JoinForm  
+              updateUser={this.updateUser}
+            />
+          }/>
+          <Route exact path = "/join" render={() => <JoinForm 
+            user={this.state.user}
+          />}/>
           <Route exact path = "/home" render={() => this.state.user ?
             <Home
               {...this.state.user}
@@ -93,19 +103,24 @@ class App extends Component {
           />}/>
           <Route exact path = "/about" component={AboutContact}/>
           <Route exact path = "/contact" component={AboutContact}/>
-          <Route exact path = "/order" component={Order}/>
+          <Route exact path = "/order" render={() => <Order 
+            user={this.state.user}
+            cakes={this.state.cakes}
+          />}/>
           <Route exact path = "/footer" component={Footer}/>
           <Route exact path = "/admin" component={Footer}/>
-          <Route exact path = "/cake/:id" render={() => <CakeShowPage
+          <Route exact path = "/cakes/:id" render={() => <CakeShowPage
             selectedCake={this.state.selectedCake}
             />}/>
           <Route exact path = "/admin/:id" component={Footer}/>
-          <Route exact path = "/user/:id/orders" component={UserOrders}/>
-          <Route exact path = "/:username" render={() => <UserProfile
-            user={this.state.user}
+          <Route exact path = "/:username/orders" render={() => <UserOrders 
             orders={this.state.orders}
           />}/>
-          <Route component={PageNotFound}/>
+          <Route exact path = "/profile/:username" render={() => <UserProfile
+            user={this.state.user}
+            orders={this.state.orders}
+            />}/>
+            <Route component={PageNotFound}/>
         </Switch> : null}
         <Footer />
       </>

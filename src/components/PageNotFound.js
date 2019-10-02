@@ -3,11 +3,11 @@ import React, {Component} from "react";
 class PageNotFound extends Component{
   render(){
     return (
-      <div>
-        <h1>Page Not Found</h1>
-        <img src="./images/backgrounds/pastel-color-watercolor-stain-background_52683-12281.jpg" className="PageNotFound" alt="">
+      <>
+        <img src="./images/backgrounds/broken.png" className="PageNotFound" alt="">
         </img>
-      </div>
+        <h1 className="notFound">Oops! Looks like <br></br> something's broken...</h1>
+      </>
     );
   }
 }

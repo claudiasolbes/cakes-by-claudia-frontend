@@ -49,7 +49,7 @@ export default class NavBar extends Component {
                 active={activeItem === 'profile'}
                 onClick={this.handleItemClick}
                 as={Link}
-                to={`/`+`${this.props.user.username}`}
+                to={`/profile/${this.props.user.username}`}
               />
               <Menu.Item
                 name='logout'

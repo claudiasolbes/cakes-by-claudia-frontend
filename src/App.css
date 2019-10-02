@@ -22,6 +22,7 @@
     font-size: 300%;
     color: hotpink;
 }
+
 .welcomeTitle2{
   position:relative;
     transition: .5s ease;
@@ -118,6 +119,19 @@
   min-width: 1500px;
 }
 
+.orderShow{
+  position:relative;
+  transition: .5s ease;
+  top: -590px;
+  left: 0px;
+}
+
+.orderFont{
+  font-family: 'Pacifico', cursive;
+  font-size: 300%;
+  color: white;
+}
+
 /* Home */
 .Home {
   background: url("./images/backgrounds/unicorn.png");
@@ -143,7 +157,7 @@
 
 /* User Pofile */
 .UserProfile {
-  background: url("./images/backgrounds/teal_cake.jpg");
+  background: url("./images/backgrounds/rainbow.jpg");
   background-position: center;
   background-size: cover;
   min-height: 648px;
@@ -154,28 +168,31 @@
   position:relative;
   transition: .5s ease;
   top: -600px;
-  left: 80px;
+  left: 60px;
+  border-style: groove;
+  border-width: 10px;
+  border-color: rgb(4, 189, 149);
 }
 
 .profileInfo{
   position:relative;
   transition: .5s ease;
-  top: -550px;
-  left: 80px;
+  top: -600px;
+  left: 90px;
 }
 
 .ordersButton{
   position:relative;
   transition: .5s ease;
-  top: -550px;
-  left: 80px;
+  top: -600px;
+  left: 90px;
 }
 
 .settingsButton{
   position:relative;
   transition: .5s ease;
-  top: -550px;
-  left: 80px;
+  top: -600px;
+  left: 90px;
 }
 
 /* USer Orders */
@@ -190,4 +207,23 @@
 /* Footer */
 .footer{
   padding-bottom: 10px
+}
+
+/* Page Not Found */
+.PageNotFound {
+  background: url("./images/backgrounds/broken.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 620px;
+  min-width: 1500px;
+}
+
+.notFound{
+  position:relative;
+    transition: .5s ease;
+    top: -500px;
+    left: 350px;
+    font-family: 'Pacifico', cursive;
+    font-size: 600%;
+    color: white;
 }

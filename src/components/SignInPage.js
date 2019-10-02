@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import { Button, Divider, Form, Grid, Segment } from "semantic-ui-react";
+import swal from 'sweetalert';
+import {Link} from "react-router-dom"
 
 class SignInPage extends Component{
 
@@ -30,7 +32,12 @@ class SignInPage extends Component{
        localStorage.setItem("token", data.token)
        this.props.updateUser(data.user)
      }else{
-       alert("Incorrect username or password")
+       swal({
+         title: "Oh-oh!",
+         text: "it seems like you have an incorrect username or password",
+         icon: "error",
+         button: "Cool, I'll try again!"
+        })
      }
     })
   }
@@ -73,7 +80,7 @@ class SignInPage extends Component{
               </Grid.Column>
 
               <Grid.Column verticalAlign='middle'>
-                <Button content='Sign up' icon='signup' size='big' />
+                <Button content='Join' icon='signup' size='big' as={Link} to="/join"/>
               </Grid.Column>
             </Grid>
 
