@@ -14,13 +14,13 @@ class UserProfile extends Component {
           <Button
               className="ordersButton"
               as={Link}
-              to={`/${this.props.user.name}/orders`}
+              to={`/${this.props.user.username}/orders`}
             > Orders
           </Button>
           <Button
               className="settingsButton"
-              // as={Link}
-              // to="/settings"
+              as={Link}
+              to={`/${this.props.user.username}/settings`}
             > Settings
           </Button>
         </div>

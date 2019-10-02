@@ -45,7 +45,6 @@ class SignInPage extends Component{
   render(){
     return (
       <div>
-        <h1>Coming Soon...</h1>
         <img src="./images/backgrounds/welcomepage.jpg" className="WelcomePage" alt="">
         </img>
         <div className="signInForm">

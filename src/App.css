@@ -227,3 +227,17 @@
     font-size: 600%;
     color: white;
 }
+
+.editButton{
+  position:relative;
+  transition: .5s ease;
+  top: -550px;
+  left: 90px;
+}
+
+.deleteButton{
+  position:relative;
+  transition: .5s ease;
+  top: -550px;
+  left: 90px;
+}

@@ -13,6 +13,9 @@ import UserOrders from "./components/UserOrders"
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import JoinForm from "./components/JoinForm"
+import Settings from "./components/Settings"
+import Admin from "./components/Admin"
+import AdminOrders from "./components/AdminOrders"
 import {Route, Switch, Redirect} from "react-router-dom"
 
 class App extends Component {
@@ -36,7 +39,7 @@ class App extends Component {
 
   componentDidMount(){
     if(localStorage.getItem("token")){
-      fetch("http://localhost:3000/home", {
+      fetch("http://localhost:3000/users", {
         headers: {
           "Authentication" : `Bearer ${localStorage.getItem("token")}`
         }
@@ -52,6 +55,12 @@ class App extends Component {
     .then(cakes =>
       this.setState({
         cakes: cakes
+      }))
+      fetch("http://localhost:3000/orders")
+    .then(resp => resp.json())
+    .then(orders =>
+      this.setState({
+        orders: orders
       }))
   }
 
@@ -74,7 +83,7 @@ class App extends Component {
         <NavBar logged_in={!!this.state.user} updateUser={this.updateUser} user={this.state.user}/>
         {!this.state.loading ? <Switch>
           <Route exact path = "/" component={WelcomePage}/>
-          <Route exact path = "/login" render={() => this.state.user ? 
+          <Route exact path = "/login" render={() => this.state.user && localStorage.length === 0? 
           <Redirect to="/home" /> :
             <SignInPage 
               updateUser={this.updateUser}
@@ -106,21 +115,26 @@ class App extends Component {
           <Route exact path = "/order" render={() => <Order 
             user={this.state.user}
             cakes={this.state.cakes}
+            orders={this.state.orders}
           />}/>
           <Route exact path = "/footer" component={Footer}/>
-          <Route exact path = "/admin" component={Footer}/>
+          <Route exact path = "/admin" component={Admin}/>
           <Route exact path = "/cakes/:id" render={() => <CakeShowPage
             selectedCake={this.state.selectedCake}
             />}/>
-          <Route exact path = "/admin/:id" component={Footer}/>
-          <Route exact path = "/:username/orders" render={() => <UserOrders 
-            orders={this.state.orders}
-          />}/>
+          <Route exact path = "/admin/:id" component={AdminOrders}/>
           <Route exact path = "/profile/:username" render={() => <UserProfile
             user={this.state.user}
             orders={this.state.orders}
+          />}/>
+          <Route exact path = "/:username/orders" render={() => <UserOrders 
+            orders={this.state.orders}
             />}/>
-            <Route component={PageNotFound}/>
+          <Route exact path = "/:username/settings" render={() => <Settings
+            user={this.state.user}
+            updateUser={this.updateUser}
+            />}/>
+          <Route component={PageNotFound}/>
         </Switch> : null}
         <Footer />
       </>
