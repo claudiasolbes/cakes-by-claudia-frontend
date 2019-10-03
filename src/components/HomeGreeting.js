@@ -9,9 +9,9 @@ class HomeGreeting extends Component {
           <h1>Hi, {this.props.user.name}!</h1>
         </div>
         <div className="scrollDownButton">
-          <Button>
+          {/* <Button>
             Show me the cakes!
-          </Button>
+          </Button> */}
         </div>
       </div>
     );

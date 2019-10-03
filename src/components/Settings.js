@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Button } from 'semantic-ui-react';
 import {Link} from "react-router-dom"
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 
 class Settings extends Component {
 

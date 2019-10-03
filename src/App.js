@@ -83,7 +83,7 @@ class App extends Component {
         <NavBar logged_in={!!this.state.user} updateUser={this.updateUser} user={this.state.user}/>
         {!this.state.loading ? <Switch>
           <Route exact path = "/" component={WelcomePage}/>
-          <Route exact path = "/login" render={() => this.state.user && localStorage.length === 0? 
+          <Route exact path = "/login" render={() => this.state.user && localStorage.length === 1? 
           <Redirect to="/home" /> :
             <SignInPage 
               updateUser={this.updateUser}

@@ -32,13 +32,13 @@ class VisitorHomeGreeting extends Component {
             </Button>
             <br></br>
             <br></br>
-            <Button
-              // className="orderButton"
-              // as={Link}
-              // to="/order"
+            {/* <Button
+              className="orderButton"
+              as={Link}
+              to="/order"
             >
               Show me the cakes!
-            </Button>
+            </Button> */}
           </div>
         </Segment>
       </Grid.Column>

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import { Grid } from 'semantic-ui-react';
-import CakeList from "./CakeList"
+// import { Grid } from 'semantic-ui-react';
+// import CakeList from "./CakeList"
 
 class Order extends Component {
   render(){

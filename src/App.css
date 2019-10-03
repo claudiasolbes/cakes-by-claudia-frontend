@@ -241,3 +241,27 @@
   top: -550px;
   left: 90px;
 }
+
+.cakeTitle{
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 400%;
+  color: hotpink;
+}
+
+.cakeDescription{
+  font-size: 300%;
+  color: hotpink;
+}
+
+.cakePrice{
+  font-size: 300%;
+  color: hotpink;
+}
+
+.cakeInfo{
+  position:relative;
+  transition: .5s ease;
+  top: 130px;
+  left: 0px;
+}
