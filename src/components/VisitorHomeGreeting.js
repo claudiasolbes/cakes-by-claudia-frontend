@@ -16,7 +16,7 @@ class VisitorHomeGreeting extends Component {
         <Segment>
           <br></br>
           <br></br>
-          <h1 className="vh-middle-column">Designer Cakes for any ocasion!</h1>
+          <h1 className="vh-middle-column">Designer Cakes for any occasion!</h1>
           <div className="orderButton">
           <br></br>
           <br></br>

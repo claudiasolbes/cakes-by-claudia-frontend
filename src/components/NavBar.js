@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from "react";
-import {Menu} from "semantic-ui-react"
-import {Link} from "react-router-dom"
+import {Menu} from "semantic-ui-react";
+import {Link} from "react-router-dom";
+import swal from 'sweetalert';
 
 export default class NavBar extends Component {
   state = { activeItem: 'home' }
@@ -13,8 +14,19 @@ export default class NavBar extends Component {
     const { activeItem } = this.state
 
     let logout = () => {
-      localStorage.clear()
-      this.props.updateUser(null)
+      swal({
+        title: "Are you sure you want to log out?",
+        icon: "warning",
+        buttons: ["Oops, no thanks!","Yes, please!"],
+        dangerMode: true
+      })
+      .then((willDelete) => {
+        if (willDelete){
+          localStorage.clear()
+          this.props.updateUser(null)
+          // figure out how to redirect to welcome page when logging out
+        }
+      }); 
     }
 
     return (
@@ -30,11 +42,11 @@ export default class NavBar extends Component {
               to="/home"
             />
             <Menu.Item
-              name='about'
-              active={activeItem === 'about'}
+              name='contact'
+              active={activeItem === 'contact'}
               onClick={this.handleItemClick}
               as={Link}
-              to="/about"
+              to="/contact"
             />
             <Menu.Item
               name='order'
@@ -55,8 +67,8 @@ export default class NavBar extends Component {
                 name='logout'
                 active={activeItem === 'logout'}
                 onClick={logout}
-                as={Link}
-                to="/"
+                // as={Link}
+                // to="/"
               />
             </Menu.Menu>
             </Fragment>
@@ -84,13 +96,13 @@ export default class NavBar extends Component {
             to="/order"
             />
             <Menu.Menu position='right'>
-            <Menu.Item
+            {/* <Menu.Item
               name='contact'
               active={activeItem === 'contact'}
               onClick={this.handleItemClick}
               as={Link}
               to="/contact"
-            />
+            /> */}
             <Menu.Item
               name='login'
               active={activeItem === 'login'}

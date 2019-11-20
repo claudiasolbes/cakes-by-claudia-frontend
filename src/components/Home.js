@@ -16,6 +16,7 @@ class Home extends Component {
         <CakeList
           cakes={this.props.cakes}
           showCake={this.props.showCake}
+          findCake={this.props.findCake}
         />
         <br></br>
       </div>

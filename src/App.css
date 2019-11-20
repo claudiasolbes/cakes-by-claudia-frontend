@@ -1,7 +1,7 @@
 
 /* Welcome Page */
 .WelcomePage {
-  background: url("./images/backgrounds/welcomepage.jpg");
+  background: url("./images/backgrounds/welcomepage.jpg") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   min-height: 620px;
@@ -15,46 +15,46 @@
 
 .welcomeTitle1{
   position:relative;
-    transition: .5s ease;
-    top: -500px;
-    left: 500px;
-    font-family: 'Pacifico', cursive;
-    font-size: 300%;
-    color: hotpink;
+  transition: .5s ease;
+  top: -500px;
+  left: 500px;
+  font-family: 'Pacifico', cursive;
+  font-size: 300%;
+  color: hotpink;
 }
 
 .welcomeTitle2{
   position:relative;
-    transition: .5s ease;
-    top: -550px;
-    left: 400px;
-    font-family: 'Pacifico', cursive;
-    font-size: 300%;
-    color: hotpink;
+  transition: .5s ease;
+  top: -550px;
+  left: 400px;
+  font-family: 'Pacifico', cursive;
+  font-size: 300%;
+  color: hotpink;
 }
 
 .logInButton {
   position:relative;
-    transition: .5s ease;
-    top: -450px;
-    left: 690px;
+  transition: .5s ease;
+  top: -450px;
+  left: 690px;
 }
 
 .visitorButton {
   position:relative;
-    transition: .5s ease;
-    top: -400px;
-    left: 550px;
+  transition: .5s ease;
+  top: -400px;
+  left: 550px;
 }
 
 /* Sign In Pge */
 .signInForm{
   position:relative;
-    transition: .5s ease;
-    top: -500px;
-    left: 410px;
-    max-width: 600px;
-    min-height: 290px;
+  transition: .5s ease;
+  top: -500px;
+  left: 410px;
+  max-width: 600px;
+  min-height: 290px;
 }
 
 
@@ -80,7 +80,7 @@
 
 /* About and Contact Page */
 .AboutAndContactPage {
-  background: url("./images/backgrounds/pastel-color-watercolor-stain-background_52683-12281.jpg");
+  background: url("./images/backgrounds/pastel-color-watercolor-stain-background_52683-12281.jpg") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   min-height: 608px;
@@ -89,9 +89,9 @@
 
 .aboutAndContact{
   position:relative;
-    transition: .5s ease;
-    top: -560px;
-    left: 250px;
+  transition: .5s ease;
+  top: -560px;
+  left: 250px;
 }
 
 .aboutAndContactContainer{
@@ -112,7 +112,7 @@
 
 /* Order Page */
 .OrderPage {
-  background: url("./images/backgrounds/stripes.jpg");
+  background: url("./images/backgrounds/stripes.jpg") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   min-height: 607px;
@@ -132,9 +132,19 @@
   color: white;
 }
 
+.comingSoon{
+  font-family: 'Pacifico', cursive;
+  font-size: 500%;
+  color: white;
+  position:relative;
+  transition: .5s ease;
+  top: 160px;
+  left: 400px;
+}
+
 /* Home */
 .Home {
-  background: url("./images/backgrounds/unicorn.png");
+  background: url("./images/backgrounds/unicorn.png") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   min-height: 648px;
@@ -143,21 +153,21 @@
 
 .greeting{
   position:relative;
-    transition: .5s ease;
-    top: -600px;
-    left: 80px;
+  transition: .5s ease;
+  top: -600px;
+  left: 80px;
 }
 
 .scrollDownButton {
   position:relative;
-    transition: .5s ease;
-    top: -80px;
-    left: 693px;
+  transition: .5s ease;
+  top: -80px;
+  left: 693px;
 }
 
 /* User Pofile */
 .UserProfile {
-  background: url("./images/backgrounds/rainbow.jpg");
+  background: url("./images/backgrounds/rainbow.jpg") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   min-height: 648px;
@@ -197,7 +207,7 @@
 
 /* USer Orders */
 .UserOrders {
-  background: url("./images/backgrounds/fork.jpg");
+  background: url("./images/backgrounds/fork.jpg") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   min-height: 648px;
@@ -211,7 +221,7 @@
 
 /* Page Not Found */
 .PageNotFound {
-  background: url("./images/backgrounds/broken.png");
+  background: url("./images/backgrounds/broken.png") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   min-height: 620px;
@@ -220,12 +230,12 @@
 
 .notFound{
   position:relative;
-    transition: .5s ease;
-    top: -500px;
-    left: 350px;
-    font-family: 'Pacifico', cursive;
-    font-size: 600%;
-    color: white;
+  transition: .5s ease;
+  top: -500px;
+  left: 350px;
+  font-family: 'Pacifico', cursive;
+  font-size: 600%;
+  color: white;
 }
 
 .editButton{
@@ -243,10 +253,15 @@
 }
 
 .cakeTitle{
-  text-align: center;
+  /* text-align: center; */
   font-family: 'Pacifico', cursive;
-  font-size: 400%;
+  font-size: 500%;
   color: hotpink;
+}
+
+.cakePicture{
+  max-height: 470px;
+  max-width: 500px;
 }
 
 .cakeDescription{
@@ -255,13 +270,12 @@
 }
 
 .cakePrice{
-  font-size: 300%;
+  font-size: 200%;
   color: hotpink;
 }
 
 .cakeInfo{
   position:relative;
   transition: .5s ease;
-  top: 130px;
-  left: 0px;
+  top: 200px;
 }

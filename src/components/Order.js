@@ -10,7 +10,7 @@ class Order extends Component {
         </img>
         <div className="orderShow">
           <h1 className="orderFont">Your Cart</h1>
-          <div>{this.props.orders.id}</div>
+          <h1 className="comingSoon"> Coming Soon...</h1>
         </div>
       </>
     )

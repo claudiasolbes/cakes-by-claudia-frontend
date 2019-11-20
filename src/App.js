@@ -14,8 +14,8 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import JoinForm from "./components/JoinForm"
 import Settings from "./components/Settings"
-import Admin from "./components/Admin"
-import AdminOrders from "./components/AdminOrders"
+// import Admin from "./components/Admin"
+// import AdminOrders from "./components/AdminOrders"
 import {Route, Switch, Redirect} from "react-router-dom"
 
 class App extends Component {
@@ -26,7 +26,8 @@ class App extends Component {
       selectedCake: {},
       user: null,
       loading: true,
-      orders: []
+      orders: [],
+      cakesAddedToOrder: []
     }
   }
 
@@ -68,13 +69,20 @@ class App extends Component {
     const selectedCake = this.state.cakes.find(function(cake) {
       return cake.image === event.target.src
     })
-    this.selectCake(selectedCake)
+    this.setState({
+      selectedCake: selectedCake
+    })
+    // this.selectCake(selectedCake)
   }
 
-    selectCake = (selectedCake) => {
-      this.setState({
-        selectedCake: selectedCake
-      })
+    // selectCake = (selectedCake) => {
+    //   this.setState({
+    //     selectedCake: selectedCake
+    //   })
+    // }
+
+    addToCart = () => {
+      debugger
     }
 
   render(){
@@ -103,6 +111,7 @@ class App extends Component {
               {...this.state.user}
               user={this.state.user}
               cakes={this.state.cakes}
+              findCake={this.findCake}
             /> :
             <Redirect to= "/visitorhome" />
           }/>
@@ -118,11 +127,12 @@ class App extends Component {
             orders={this.state.orders}
           />}/>
           <Route exact path = "/footer" component={Footer}/>
-          <Route exact path = "/admin" component={Admin}/>
+          {/* <Route exact path = "/admin" component={Admin}/> */}
           <Route exact path = "/cakes/:id" render={() => <CakeShowPage
             selectedCake={this.state.selectedCake}
+            addToCart={this.addToCart}
             />}/>
-          <Route exact path = "/admin/:id" component={AdminOrders}/>
+          {/* <Route exact path = "/admin/:id" component={AdminOrders}/> */}
           <Route exact path = "/profile/:username" render={() => <UserProfile
             user={this.state.user}
             orders={this.state.orders}

@@ -8,17 +8,17 @@ const CakeShowPage = (props) => {
     <Segment>
       <Grid columns={2} relaxed='very' stackable>
         <Grid.Column>
-          <p className="cakeTitle">{props.selectedCake.name}</p>
-          <Image src={props.selectedCake.image} />
+          <h1 className="cakeTitle">{props.selectedCake.name}</h1>
+          <Image src={props.selectedCake.image} className="cakePicture"/>
         </Grid.Column>
         <Grid.Column>
           <div className="cakeInfo">
-          <p className="cakeDescription">{props.selectedCake.description}</p>
-          <p className="cakePrice">${props.selectedCake.price}</p>
-          <Button> Yum! Add to Cart! </Button>
+          <h2 className="cakeDescription">{props.selectedCake.description}</h2>
+          <h3 className="cakePrice">${props.selectedCake.price}</h3>
+          <Button onClick={props.addToCart}> Yum! Add to Cart! </Button>
           <Button
             as={Link}
-            to="/visitorhome"
+            to="/home"
           >
             Hmmm... I'll keep browsing!
           </Button>

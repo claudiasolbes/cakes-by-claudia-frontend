@@ -18,7 +18,7 @@ class AboutContact extends Component{
               <Grid.Column>
                 <Segment>
                   <h1>Claudia Solbes</h1>
-                    I'm a 28 (almost 29!) year old (almost)web developer, born and raised in Mexico. I have a degree in Culinary Arts but my real passion is baking. I also code.I'm a 28 (almost 29!) year old (almost)web developer, born and raised in Mexico. I have a degree in Culinary Arts but my real passion is baking. I also code.I'm a 28 (almost 29!) year old (almost)web developer, born and raised in Mexico. I have a degree in Culinary Arts but my real passion is baking. I also code.
+                  I'm a 28 (almost 29!) year old web developer, born and raised in Mexico. I have a degree in Culinary Arts and my passion is baking. I also code.
                 </Segment>
                 <Segment>
                   <h1>Contact Us!</h1>
