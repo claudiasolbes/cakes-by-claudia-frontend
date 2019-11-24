@@ -112,6 +112,7 @@ class App extends Component {
               user={this.state.user}
               cakes={this.state.cakes}
               findCake={this.findCake}
+              orders={this.state.orders}
             /> :
             <Redirect to= "/visitorhome" />
           }/>

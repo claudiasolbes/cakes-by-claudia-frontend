@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import CakeList from "./CakeList";
 import HomeGreeting from "./HomeGreeting";
+import {Button} from "semantic-ui-react";
+import {Link} from "react-router-dom";
 
 class Home extends Component {
   render(){
@@ -11,6 +13,21 @@ class Home extends Component {
         <HomeGreeting 
           user={this.props.user}
         />
+        <br></br>
+        <Button
+          className="ordersButton"
+          as={Link}
+          to={`/${this.props.user.username}/orders`}
+        > Orders
+        </Button>
+        <br></br>
+        <br></br>
+        <Button
+          className="settingsButton"
+          as={Link}
+          to={`/${this.props.user.username}/settings`}
+        > Settings
+        </Button>
         <br></br>
         <br></br>
         <CakeList

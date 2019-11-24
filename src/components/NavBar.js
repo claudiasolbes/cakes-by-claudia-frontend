@@ -56,13 +56,13 @@ export default class NavBar extends Component {
               to="/order"
             />
             <Menu.Menu position='right'>
-              <Menu.Item
+              {/* <Menu.Item
                 name='profile'
                 active={activeItem === 'profile'}
                 onClick={this.handleItemClick}
                 as={Link}
                 to={`/profile/${this.props.user.username}`}
-              />
+              /> */}
               <Menu.Item
                 name='logout'
                 active={activeItem === 'logout'}
