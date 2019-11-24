@@ -221,6 +221,13 @@
   min-width: 1500px;
 }
 
+.orderCard{
+  position:relative;
+  transition: .5s ease;
+  top: -600px;
+  left: 90px;
+}
+
 /* Footer */
 .footer{
   padding-bottom: 10px

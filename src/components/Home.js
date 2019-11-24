@@ -19,7 +19,7 @@ class Home extends Component {
             className="ordersButton"
             as={Link}
             to={`/${this.props.user.username}/orders`}
-          > Orders
+          > My Orders
           </Button>
           <br></br>
           <br></br>
@@ -27,7 +27,7 @@ class Home extends Component {
             className="settingsButton"
             as={Link}
             to={`/${this.props.user.username}/settings`}
-          > Settings
+          > My Settings
           </Button>
           <br></br>
           <br></br>
