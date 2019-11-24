@@ -31,11 +31,11 @@ class Home extends Component {
           </Button>
           <br></br>
           <br></br>
-          <Button
+          {/* <Button
             className="cakesButton"
             href="#cakes"
           > Cakes
-          </Button>
+          </Button> */}
           </div>
         <div id="cakes">
           <CakeList

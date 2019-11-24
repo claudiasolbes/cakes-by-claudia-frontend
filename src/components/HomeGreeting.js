@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-// import { Button } from 'semantic-ui-react'
+import {Button} from "semantic-ui-react";
 
 class HomeGreeting extends Component {
   render(){
@@ -9,9 +9,11 @@ class HomeGreeting extends Component {
           <h1>Hi, {this.props.user.name}!</h1>
         </div>
         <div className="scrollDownButton">
-          {/* <Button>
-            Show me the cakes!
-          </Button> */}
+          <Button
+            className="cakesButton"
+            href="#cakes"
+          > Cakes
+          </Button>
         </div>
       </div>
     );
