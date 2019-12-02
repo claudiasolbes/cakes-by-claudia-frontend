@@ -159,10 +159,11 @@
 }
 
 .scrollDownButton {
-  position:relative;
+  text-align: center;
+  /* position:relative;
   transition: .5s ease;
   top: -80px;
-  left: 693px;
+  left: 693px; */
 }
 
 /* User Pofile */
