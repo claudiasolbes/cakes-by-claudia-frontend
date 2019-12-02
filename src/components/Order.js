@@ -10,7 +10,40 @@ class Order extends Component {
         </img>
         <div className="orderShow">
           <h1 className="orderFont">Your Cart</h1>
-          <h1 className="comingSoon"> Coming Soon...</h1>
+        <div className="ui internally celled grid">
+          <div className="row">
+            <div className="three wide column orderFont">
+              <p> Qt </p>
+            </div>
+            <div className="ten wide column orderFont">
+              <p>Product</p>
+            </div>
+            <div className="three wide column orderFont">
+            <p> Price </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="three wide column"></div>
+            <div className="ten wide column">
+              <p></p>
+            </div>
+            <div className="three wide column"></div>
+          </div>
+          <div className="row">
+            <div className="three wide column"></div>
+            <div className="ten wide column">
+              <p></p>
+            </div>
+            <div className="three wide column"></div>
+          </div>
+          <div className="row">
+            <div className="three wide column"></div>
+            <div className="ten wide column">
+              <p></p>
+            </div>
+            <div className="three wide column"></div>
+          </div>
+        </div>
         </div>
       </>
     )
