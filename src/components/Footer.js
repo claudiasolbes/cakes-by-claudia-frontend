@@ -6,7 +6,14 @@ class Footer extends Component {
     return (
       <div className="footer">
         <Header as='h3' dividing/>
-        <p>Cakes By Claudia - with ❤ __________________________________________________________________________________________________________________________________________________________________ Website Created By: Claudia Solbes</p>
+      <div className="ui grid">
+        <div className="left floated five wide column">
+          <p>Cakes By Claudia - made with ❤ </p>
+        </div>
+        <div className="right floated five wide column">
+        <p>Website Created By Claudia Solbes</p>
+        </div>
+      </div>         
       </div>
     );
   }

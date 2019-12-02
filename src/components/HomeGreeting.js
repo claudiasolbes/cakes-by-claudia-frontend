@@ -3,7 +3,6 @@ import {Button} from "semantic-ui-react";
 
 class HomeGreeting extends Component {
   render(){
-    console.log(this.props.user.name)
     return (
       <div>
         <div className="greeting">
