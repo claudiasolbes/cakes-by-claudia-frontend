@@ -35,11 +35,11 @@ class Settings extends Component {
         <img src="./images/backgrounds/rainbow.jpg" className="UserProfile" alt=""/>
         <div className="profileInfo">
           <img src={this.props.user.image} alt=""/>
-          <h1>Name: {this.props.user.name}</h1>
-          <h1>Username: {this.props.user.username}</h1>
-          <h1>Password{this.props.user.password}</h1>
-          <h1>Email: {this.props.user.email}</h1>
-          <h1>Address: {this.props.user.address}</h1>
+          <h1 className="settingsFont">Name: {this.props.user.name}</h1>
+          <h1 className="settingsFont">Username: {this.props.user.username}</h1>
+          <h1 className="settingsFont">Password{this.props.user.password}</h1>
+          <h1 className="settingsFont">Email: {this.props.user.email}</h1>
+          <h1 className="settingsFont">Address: {this.props.user.address}</h1>
         </div>
         <Button
           className="editButton"

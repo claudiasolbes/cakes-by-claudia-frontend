@@ -212,7 +212,7 @@
   left: -70px;
 }
 
-/* USer Orders */
+/* User Orders */
 .UserOrders {
   background: url("./images/backgrounds/fork.jpg") no-repeat center center fixed;
   background-position: center;
@@ -292,4 +292,11 @@
   position:relative;
   transition: .5s ease;
   top: 200px;
+}
+
+/* Settings */
+.settingsFont{
+  font-family: 'Pacifico', cursive;
+  font-size: 200%;
+  color: lightseagreen;
 }

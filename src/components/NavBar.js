@@ -49,7 +49,7 @@ export default class NavBar extends Component {
               to="/contact"
             />
             <Menu.Item
-              name='order'
+              name='cart'
               active={activeItem === 'order'}
               onClick={this.handleItemClick}
               as={Link}
