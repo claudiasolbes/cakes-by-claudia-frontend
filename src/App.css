@@ -253,20 +253,6 @@
   color: white;
 }
 
-.editButton{
-  position:relative;
-  transition: .5s ease;
-  top: -550px;
-  left: 90px;
-}
-
-.deleteButton{
-  position:relative;
-  transition: .5s ease;
-  top: -550px;
-  left: 90px;
-}
-
 .cakeTitle{
   /* text-align: center; */
   font-family: 'Pacifico', cursive;
@@ -300,4 +286,25 @@
   font-family: 'Pacifico', cursive;
   font-size: 200%;
   color: lightseagreen;
+}
+
+.editButton{
+  position:relative;
+  transition: .5s ease;
+  top: -550px;
+  left: 90px;
+}
+
+.deleteButton{
+  position:relative;
+  transition: .5s ease;
+  top: -550px;
+  left: 90px;
+}
+
+.backToHomeButton{
+  position:relative;
+  transition: .5s ease;
+  top: -500px;
+  left: -67px;
 }
