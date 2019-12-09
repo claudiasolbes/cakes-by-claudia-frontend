@@ -23,7 +23,7 @@ class Order extends Component {
         className="backToHomeButton"
         as={Link}
         to={`/home`}
-      > Back to Home
+      > Home
       </Button>
       </div>
       </>

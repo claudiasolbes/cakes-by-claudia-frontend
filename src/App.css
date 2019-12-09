@@ -305,6 +305,6 @@
 .backToHomeButton{
   position:relative;
   transition: .5s ease;
-  top: -500px;
-  left: -67px;
+  top: -550px;
+  left: 90px;
 }
