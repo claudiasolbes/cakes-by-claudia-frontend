@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import { Card } from 'semantic-ui-react';
+import {Button} from "semantic-ui-react";
+import {Link} from "react-router-dom";
 
 class Order extends Component {
   render(){
@@ -15,6 +17,14 @@ class Order extends Component {
         <Card  color="pink">
           Hi
         </Card>
+      </div>
+      <div>
+      <Button
+        className="backToHomeButton"
+        as={Link}
+        to={`/home`}
+      > Back to Home
+      </Button>
       </div>
       </>
     );
