@@ -54,6 +54,12 @@ class Settings extends Component {
           to={"/"}
         > Delete
         </Button>
+        <Button
+          className="backToHomeButton"
+          as={Link}
+          to={`/home`}
+        > Back to Home
+        </Button>
         </div>
     )
   }
