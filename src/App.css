@@ -16,8 +16,8 @@
 .welcomeTitle1{
   position:relative;
   transition: .5s ease;
-  top: -500px;
-  left: 500px;
+  top: -450px;
+  left: 350px;
   font-family: 'Pacifico', cursive;
   font-size: 300%;
   color: hotpink;
@@ -26,8 +26,8 @@
 .welcomeTitle2{
   position:relative;
   transition: .5s ease;
-  top: -550px;
-  left: 400px;
+  top: -490px;
+  left: 240px;
   font-family: 'Pacifico', cursive;
   font-size: 300%;
   color: hotpink;
@@ -37,14 +37,14 @@
   position:relative;
   transition: .5s ease;
   top: -450px;
-  left: 690px;
+  left: 590px;
 }
 
 .visitorButton {
   position:relative;
   transition: .5s ease;
   top: -400px;
-  left: 550px;
+  left: 450px;
 }
 
 /* Sign In Pge */
