@@ -47,7 +47,7 @@
   left: 450px;
 }
 
-/* Sign In Pge */
+/* Sign In Page */
 .signInForm{
   position:relative;
   transition: .5s ease;
@@ -63,6 +63,20 @@
   transition: .5s ease;
   top: -300px;
   left: 580px;
+}
+
+/* Join Page */
+.joinDiv{
+  border: 1px solid red;
+}
+
+.joinForm{
+  position:relative;
+  transition: .5s ease;
+  top: -520px;
+  left: 480px;
+  max-width: 280px;
+  min-height: 290px;
 }
 
 /* Visitor Welcome Page */
