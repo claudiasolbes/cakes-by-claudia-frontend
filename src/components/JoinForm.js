@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Button, Form } from "semantic-ui-react";
+import { Button, Form, Grid, Segment } from "semantic-ui-react";
 import swal from 'sweetalert';
 
 class JoinForm extends Component{
@@ -47,57 +47,127 @@ class JoinForm extends Component{
   render(){
     return (
       <div>
-        <Form
-          onSubmit={this.handleLogInSubmit}
-        >
-          <Form.Input
-            label='Name'
-            placeholder='Name'
-            name="name"
-            onChange={this.handleChange}
-            value={this.state.name}
-          />
-          <Form.Input
-            label='Username'
-            type='username'
-            placeholder='Username'
-            name="username"
-            onChange={this.handleChange}
-            value={this.state.username}
-          />
-          <Form.Input
-            label='Password'
-            placeholder='Password'
-            name="password"
-            onChange={this.handleChange}
-            value={this.state.password}
-          />
-          <Form.Input
-            label='Email'
-            placeholder='Email'
-            name="email"
-            onChange={this.handleChange}
-            value={this.state.email}
-          />
-          <Form.Input
-            label='Address'
-            type='address'
-            placeholder='Address'
-            name="address"
-            onChange={this.handleChange}
-            value={this.state.address}
-          />
-          <Form.Input
-            label='Avatar'
-            type='avatar'
-            placeholder='link to the picture'
-            name="image"
-            onChange={this.handleChange}
-            value={this.state.image}
-          />
-          <Button content='Join'/>
-        </Form>
-    </div>
+        <img src="./images/backgrounds/welcomepage.jpg" className="WelcomePage" alt="">
+        </img>
+        <div className="joinForm">
+          <Segment placeholder>
+            <Grid columns={1} relaxed='very' stackable>
+              <Grid.Column>
+                <Form
+                  onSubmit={this.handleLogInSubmit}
+                >
+                  <Form.Input
+                    label='Name'
+                    placeholder='Name'
+                    name="name"
+                    onChange={this.handleChange}
+                    value={this.state.name}
+                  />
+                  <Form.Input
+                    label='Username'
+                    type='username'
+                    placeholder='Username'
+                    name="username"
+                    onChange={this.handleChange}
+                    value={this.state.username}
+                  />
+                  <Form.Input
+                    label='Password'
+                    placeholder='Password'
+                    name="password"
+                    onChange={this.handleChange}
+                    value={this.state.password}
+                  />
+                  <Form.Input
+                    label='Email'
+                    placeholder='Email'
+                    name="email"
+                    onChange={this.handleChange}
+                    value={this.state.email}
+                  />
+                  <Form.Input
+                    label='Address'
+                    type='address'
+                    placeholder='Address'
+                    name="address"
+                    onChange={this.handleChange}
+                    value={this.state.address}
+                  />
+                  {/* <Form.Input
+                    label='Avatar'
+                    type='avatar'
+                    placeholder='link to the picture'
+                    name="image"
+                    onChange={this.handleChange}
+                    value={this.state.image}
+                  /> */}
+                  <Button content='Join'/>
+                </Form>
+              </Grid.Column>
+            </Grid>
+          </Segment>
+        </div>
+      </div>
+    //   <div>
+    //     <div class="ui centered cards">
+    //       <div class="ui card">
+    //         <div class="content">
+    //           <div>
+    //             <Form
+    //               onSubmit={this.handleLogInSubmit}
+    //             >
+    //               <Form.Input
+    //                 label='Name'
+    //                 placeholder='Name'
+    //                 name="name"
+    //                 onChange={this.handleChange}
+    //                 value={this.state.name}
+    //               />
+    //               <Form.Input
+    //                 label='Username'
+    //                 type='username'
+    //                 placeholder='Username'
+    //                 name="username"
+    //                 onChange={this.handleChange}
+    //                 value={this.state.username}
+    //               />
+    //               <Form.Input
+    //                 label='Password'
+    //                 placeholder='Password'
+    //                 name="password"
+    //                 onChange={this.handleChange}
+    //                 value={this.state.password}
+    //               />
+    //               <Form.Input
+    //                 label='Email'
+    //                 placeholder='Email'
+    //                 name="email"
+    //                 onChange={this.handleChange}
+    //                 value={this.state.email}
+    //               />
+    //               <Form.Input
+    //                 label='Address'
+    //                 type='address'
+    //                 placeholder='Address'
+    //                 name="address"
+    //                 onChange={this.handleChange}
+    //                 value={this.state.address}
+    //               />
+    //               {/* <Form.Input
+    //                 label='Avatar'
+    //                 type='avatar'
+    //                 placeholder='link to the picture'
+    //                 name="image"
+    //                 onChange={this.handleChange}
+    //                 value={this.state.image}
+    //               /> */}
+    //               <Button content='Join'/>
+    //             </Form>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    // </div>
     );
   }
 }

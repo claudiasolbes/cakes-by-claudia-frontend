@@ -11,7 +11,7 @@ class WelcomePage extends Component{
         <>
         <h1 className="welcomeTitle1">Welcome to Cakes By Claudia,</h1>
         <br></br>
-        <h1 className="welcomeTitle2">where we make your dreams become cakes!</h1>
+        <h1 className="welcomeTitle2">where we make your dreams come cakes!</h1>
         </>
           <Button
             className="logInButton"

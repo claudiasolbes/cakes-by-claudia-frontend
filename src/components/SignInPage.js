@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Button, Divider, Form, Grid, Segment } from "semantic-ui-react";
 import swal from 'sweetalert';
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 class SignInPage extends Component{
 
