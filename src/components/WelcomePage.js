@@ -8,11 +8,12 @@ class WelcomePage extends Component{
       <div className="welcomePageContainer">
         <img src="./images/backgrounds/welcomepage.jpg" className="WelcomePage" alt="">
         </img>
-        <>
-        <h1 className="welcomeTitle1">Welcome to Cakes By Claudia,</h1>
-        <br></br>
-        <h1 className="welcomeTitle2">where we make your dreams come cakes!</h1>
-        </>
+        <div className="welcomeTitlesDiv">
+          <h1 className="welcomeTitle1">Welcome to Cakes By Claudia,</h1>
+          <br></br>
+          <h1 className="welcomeTitle2">where we make your dreams come cakes!</h1>
+        </div>
+        <div className= "welcomeButtonsDiv">
           <Button
             className="logInButton"
             onClick={this.props.userLogIn}
@@ -25,6 +26,7 @@ class WelcomePage extends Component{
             as={Link}
             to="/visitorhome"
           >Thanks, I'm just browsing!</Button>
+        </div>
       </div>
     );
   }

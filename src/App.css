@@ -9,8 +9,16 @@
 }
 
 .welcomePageContainer{
-  max-height: 608px;
+  max-height: 622px;
   min-width: 1500px;
+}
+
+.welcomeTitlesDiv{
+  max-height: 0px;
+}
+
+.welcomeButtonsDiv{
+  max-height: 0px;
 }
 
 .welcomeTitle1{
@@ -36,14 +44,14 @@
 .logInButton {
   position:relative;
   transition: .5s ease;
-  top: -450px;
+  top: -300px;
   left: 590px;
 }
 
 .visitorButton {
   position:relative;
   transition: .5s ease;
-  top: -400px;
+  top: -250px;
   left: 450px;
 }
 
@@ -245,7 +253,7 @@
 
 /* Footer */
 .footer{
-  padding-bottom: 10px
+  padding-bottom: 10px;
 }
 
 /* Page Not Found */
