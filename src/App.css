@@ -67,7 +67,7 @@
 
 /* Join Page */
 .joinDiv{
-  border: 1px solid red;
+  max-height: 622px;
 }
 
 .joinForm{
